@@ -64,3 +64,22 @@ code{font-family:monospace}
   .hero{grid-template-columns:1fr;padding-top:65px}.hero-art{min-height:330px}.intro,.two-col,.cv-preview{grid-template-columns:1fr;gap:35px}.cards,.project-grid,.shadow-grid,.personal-grid,.contact-grid{grid-template-columns:1fr}.currently-grid{grid-template-columns:1fr 1fr}.currently-grid div:nth-child(2){border-right:0}.currently-grid div{border-bottom:1px solid var(--line)}footer{flex-direction:column;gap:5px}
 }
 @media(max-width:500px){.nav-wrap{padding:16px 20px}.hero,.section,.page-hero{padding-left:20px;padding-right:20px}.hero{padding-top:50px}.hero-art{min-height:280px}.currently-grid{grid-template-columns:1fr}.currently-grid div{border-right:0!important}.experience-item,.timeline-list>div{grid-template-columns:1fr;gap:8px}footer{padding-left:20px;padding-right:20px}}
+
+.art-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.art-gallery img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    display: block;
+    transition: 0.2s;
+}
+
+.art-gallery img:hover {
+    opacity: 0.8;
+}
