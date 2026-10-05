@@ -83,3 +83,11 @@ code{font-family:monospace}
 .art-gallery img:hover {
     opacity: 0.8;
 }
+
+.side-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 20px auto 0;
+}
