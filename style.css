@@ -113,20 +113,50 @@ a {
 /* =========================================================
    HERO
    ========================================================= */
+
 .hero {
   max-width: 1180px;
   margin: auto;
+
   min-height: 650px;
+
   padding: 90px 28px 80px;
 
   display: grid;
-  grid-template-columns: 1fr 420px;
+
+  /*
+     LEFT = text
+     RIGHT = photo
+  */
+  grid-template-columns: minmax(0, 1fr) 420px;
+
   align-items: center;
+
   gap: 80px;
 }
 
 .hero-content {
   max-width: 650px;
+}
+
+.hero h1 {
+  font-size: clamp(3.4rem, 7vw, 6.7rem);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.hero h1 em {
+  font-family: var(--serif);
+  font-weight: 500;
+}
+
+.hero-intro {
+  font-size: 1.12rem;
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0;
 }
 
 .hero-photo {
@@ -136,10 +166,94 @@ a {
 }
 
 .hero-photo img {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   height: 560px;
+
   object-fit: cover;
   display: block;
+
+  border-radius: 2px;
+}
+
+
+/* =========================================================
+   GENERAL TYPOGRAPHY
+   ========================================================= */
+
+.eyebrow {
+  font-size: 0.73rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: var(--sage);
+  font-weight: 700;
+
+  margin: 0 0 18px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.12;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(3.4rem, 7vw, 6.7rem);
+  letter-spacing: -0.045em;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: 1.55rem;
+}
+
+em {
+  font-family: var(--serif);
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.button-row {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.button {
+  display: inline-block;
+
+  background: var(--ink);
+  color: #fff;
+
+  padding: 13px 21px;
+  border-radius: 2px;
+
+  font-size: 0.86rem;
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: var(--sage);
+}
+
+.text-link {
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 
@@ -211,16 +325,12 @@ a {
   transform: translateY(-4px);
 }
 
-.card-number {
-  font-size: 0.72rem;
-
-  color: var(--clay);
-
-  font-weight: 700;
-}
+/*
+   Card numbers removed, so this is no longer needed.
+*/
 
 .feature-card h3 {
-  margin-top: 70px;
+  margin-top: 0;
 }
 
 .feature-card p {
@@ -250,7 +360,9 @@ a {
   padding-bottom: 130px;
 }
 
+
 /* Main quote */
+
 .quote > p:first-child {
   font-family: var(--serif);
 
@@ -263,14 +375,18 @@ a {
   max-width: 850px;
 }
 
+
 /* Attribution */
+
 .quote > span {
   color: var(--muted);
 
   font-size: 0.9rem;
 }
 
-/* Personal philosophy underneath quote */
+
+/* Personal philosophy */
+
 .quote-note {
   font-family: var(--sans);
 
@@ -441,44 +557,68 @@ footer {
 
   margin-top: 35px;
 }
+
+
+/* =========================================================
+   RESEARCH STATEMENT
+   ========================================================= */
+
 .research-statement {
   max-width: 850px;
+
   margin-left: auto;
   margin-right: auto;
+
   text-align: center;
+
   padding: 70px 0;
+
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
 .research-statement h2 {
   font-family: var(--serif);
+
   font-size: 2.2rem;
+
   margin-bottom: 20px;
 }
 
 .research-statement p {
   color: var(--muted);
+
   line-height: 1.7;
+
   max-width: 720px;
+
   margin: 0 auto 16px;
 }
 
 .research-statement .button {
   display: inline-block;
+
   margin-top: 18px;
+
   padding: 12px 22px;
+
   background: var(--sage);
+
   color: white;
+
   text-decoration: none;
+
   font-size: 0.9rem;
+
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .research-statement .button:hover {
   opacity: 0.85;
+
   transform: translateY(-2px);
 }
+
 
 /* =========================================================
    METHODS
@@ -855,15 +995,37 @@ code {
     display: block;
   }
 
+
+  /* HERO */
+
   .hero {
     grid-template-columns: 1fr;
 
+    min-height: auto;
+
     padding-top: 65px;
+
+    gap: 50px;
   }
 
-  .hero-art {
-    min-height: 330px;
+  .hero-content {
+    max-width: 650px;
   }
+
+  .hero-photo {
+    justify-content: flex-start;
+  }
+
+  .hero-photo img {
+    width: 100%;
+
+    max-width: 380px;
+
+    height: 500px;
+  }
+
+
+  /* OTHER SECTIONS */
 
   .intro,
   .two-col,
@@ -881,7 +1043,9 @@ code {
     grid-template-columns: 1fr;
   }
 
-  /* Art gallery becomes 2 columns */
+
+  /* ART GALLERY */
+
   .art-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -889,6 +1053,9 @@ code {
   .art-gallery img {
     height: 280px;
   }
+
+
+  /* CURRENTLY */
 
   .currently-grid {
     grid-template-columns: 1fr 1fr;
@@ -901,6 +1068,9 @@ code {
   .currently-grid div {
     border-bottom: 1px solid var(--line);
   }
+
+
+  /* FOOTER */
 
   footer {
     flex-direction: column;
@@ -929,13 +1099,27 @@ code {
 
   .hero {
     padding-top: 50px;
+
+    gap: 40px;
   }
 
-  .hero-art {
-    min-height: 280px;
+  .hero h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
   }
 
-  /* Art gallery becomes 1 column */
+  .hero-intro {
+    font-size: 1rem;
+  }
+
+  .hero-photo img {
+    max-width: 100%;
+
+    height: 450px;
+  }
+
+
+  /* ART GALLERY */
+
   .art-gallery {
     grid-template-columns: 1fr;
 
@@ -948,6 +1132,9 @@ code {
     max-height: 500px;
   }
 
+
+  /* CURRENTLY */
+
   .currently-grid {
     grid-template-columns: 1fr;
   }
@@ -956,6 +1143,9 @@ code {
     border-right: 0 !important;
   }
 
+
+  /* EXPERIENCE */
+
   .experience-item,
   .timeline-list > div {
     grid-template-columns: 1fr;
@@ -963,10 +1153,16 @@ code {
     gap: 8px;
   }
 
+
+  /* FOOTER */
+
   footer {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+
+  /* QUOTE */
 
   .quote {
     padding-top: 90px;
