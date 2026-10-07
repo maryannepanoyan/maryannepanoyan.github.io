@@ -8,6 +8,7 @@
 :root {
   --ink: #22251f;
   --muted: #696c62;
+
   --cream: #f7f4ed;
   --paper: #fffdf8;
 
@@ -36,8 +37,10 @@ html {
 
 body {
   margin: 0;
+
   background: var(--paper);
   color: var(--ink);
+
   font-family: var(--sans);
   line-height: 1.7;
 }
@@ -92,7 +95,8 @@ a {
 
 .nav a {
   color: var(--muted);
-  transition: 0.2s;
+
+  transition: color 0.2s ease;
 }
 
 .nav a:hover,
@@ -107,6 +111,9 @@ a {
   background: none;
 
   font-size: 1.4rem;
+  color: var(--ink);
+
+  cursor: pointer;
 }
 
 
@@ -124,10 +131,6 @@ a {
 
   display: grid;
 
-  /*
-     LEFT = text
-     RIGHT = photo
-  */
   grid-template-columns: minmax(0, 1fr) 420px;
 
   align-items: center;
@@ -141,8 +144,10 @@ a {
 
 .hero h1 {
   font-size: clamp(3.4rem, 7vw, 6.7rem);
+
   letter-spacing: -0.045em;
   line-height: 1.05;
+
   margin-top: 0;
   margin-bottom: 28px;
 }
@@ -154,13 +159,17 @@ a {
 
 .hero-intro {
   font-size: 1.12rem;
+
   color: var(--muted);
+
   max-width: 650px;
+
   margin: 0;
 }
 
 .hero-photo {
   display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -168,9 +177,11 @@ a {
 .hero-photo img {
   width: 100%;
   max-width: 420px;
+
   height: 560px;
 
   object-fit: cover;
+
   display: block;
 
   border-radius: 2px;
@@ -182,14 +193,17 @@ a {
    ========================================================= */
 
 .eyebrow {
+  margin: 0 0 18px;
+
   font-size: 0.73rem;
+
   letter-spacing: 0.16em;
+
   text-transform: uppercase;
 
   color: var(--sage);
-  font-weight: 700;
 
-  margin: 0 0 18px;
+  font-weight: 700;
 }
 
 h1,
@@ -201,12 +215,15 @@ h3 {
 
 h1 {
   font-size: clamp(3.4rem, 7vw, 6.7rem);
+
   letter-spacing: -0.045em;
+
   margin-bottom: 28px;
 }
 
 h2 {
   font-size: clamp(2rem, 4vw, 3.3rem);
+
   letter-spacing: -0.03em;
 }
 
@@ -219,16 +236,30 @@ em {
   font-weight: 500;
 }
 
+.lead {
+  max-width: 700px;
+
+  margin: 20px 0 28px;
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  color: var(--muted);
+}
+
 
 /* =========================================================
-   BUTTONS
+   BUTTONS & LINKS
    ========================================================= */
 
 .button-row {
   display: flex;
+
   align-items: center;
 
   gap: 25px;
+
   margin-top: 35px;
 }
 
@@ -236,23 +267,30 @@ em {
   display: inline-block;
 
   background: var(--ink);
+
   color: #fff;
 
   padding: 13px 21px;
+
   border-radius: 2px;
 
   font-size: 0.86rem;
+
   font-weight: 700;
 
-  transition: 0.2s;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
 }
 
 .button:hover {
   background: var(--sage);
+
+  transform: translateY(-2px);
 }
 
 .text-link {
   font-weight: 700;
+
   font-size: 0.9rem;
 }
 
@@ -263,6 +301,7 @@ em {
 
 .section {
   max-width: 1180px;
+
   margin: auto;
 
   padding: 90px 28px;
@@ -285,6 +324,7 @@ em {
 
 .intro-text {
   font-size: 1.02rem;
+
   color: var(--muted);
 
   padding-top: 8px;
@@ -316,7 +356,8 @@ em {
 
   border: 1px solid transparent;
 
-  transition: 0.25s;
+  transition: transform 0.25s ease,
+              border-color 0.25s ease;
 }
 
 .feature-card:hover {
@@ -324,10 +365,6 @@ em {
 
   transform: translateY(-4px);
 }
-
-/*
-   Card numbers removed, so this is no longer needed.
-*/
 
 .feature-card h3 {
   margin-top: 0;
@@ -360,9 +397,6 @@ em {
   padding-bottom: 130px;
 }
 
-
-/* Main quote */
-
 .quote > p:first-child {
   font-family: var(--serif);
 
@@ -375,17 +409,11 @@ em {
   max-width: 850px;
 }
 
-
-/* Attribution */
-
 .quote > span {
   color: var(--muted);
 
   font-size: 0.9rem;
 }
-
-
-/* Personal philosophy */
 
 .quote-note {
   font-family: var(--sans);
@@ -409,8 +437,6 @@ em {
    ========================================================= */
 
 footer {
-  border-top: 1px solid var(--line);
-
   max-width: 1180px;
 
   margin: auto;
@@ -424,6 +450,8 @@ footer {
   color: var(--muted);
 
   font-size: 0.76rem;
+
+  border-top: 1px solid var(--line);
 }
 
 
@@ -453,21 +481,7 @@ footer {
   padding-bottom: 65px;
 }
 
-/* =========================================================
-   LEAD TEXT
-   ========================================================= */
 
-.lead {
-  max-width: 700px;
-
-  margin: 20px 0 28px;
-
-  font-size: 1.1rem;
-
-  line-height: 1.7;
-
-  color: var(--muted);
-}
 /* =========================================================
    TWO COLUMN CONTENT
    ========================================================= */
@@ -624,7 +638,8 @@ footer {
 
   font-size: 0.9rem;
 
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease,
+              transform 0.2s ease;
 }
 
 .research-statement .button:hover {
@@ -772,126 +787,160 @@ footer {
    PERSONAL PAGE
    ========================================================= */
 
-.personal-grid {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 18px;
+.personal-section {
+  border-top: 1px solid var(--line);
 }
 
-.personal-card {
-  padding: 32px;
+.personal-intro {
+  max-width: 720px;
 
-  background: var(--cream);
+  margin: 0 0 32px;
 
-  min-height: 360px;
-}
-
-.personal-card p {
   color: var(--muted);
-}
-
-.placeholder-art {
-  height: 150px;
-
-  background: var(--sage-light);
-
-  display: grid;
-
-  place-items: center;
-
-  text-align: center;
-
-  font-family: var(--serif);
-
-  font-size: 1.8rem;
-
-  font-style: italic;
-
-  margin-bottom: 28px;
-}
-
-.big-icon {
-  font-size: 4rem;
-
-  height: 150px;
-
-  display: flex;
-
-  align-items: center;
 }
 
 
 /* =========================================================
-   ART GALLERY
+   PERSONAL — SCROLLING IMAGE GALLERIES
    ========================================================= */
 
-.art-gallery {
+.scroll-gallery {
+  display: flex;
+
+  gap: 18px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 10px 0 18px;
+
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+
+  scrollbar-color: var(--line) transparent;
+}
+
+.scroll-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-gallery::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-gallery::-webkit-scrollbar-thumb {
+  background: var(--line);
+
+  border-radius: 10px;
+}
+
+.scroll-gallery a {
+  flex: 0 0 auto;
+
+  display: block;
+
+  background: transparent;
+
+  border: none;
+
+  overflow: hidden;
+
+  transition: transform 0.25s ease;
+}
+
+.scroll-gallery a:hover {
+  transform: translateY(-4px);
+}
+
+.scroll-gallery img {
+  display: block;
+
+  height: 360px;
+
+  width: auto;
+
+  max-width: 500px;
+
+  object-fit: contain;
+
+  border-radius: 2px;
+
+  transition: opacity 0.25s ease;
+}
+
+.scroll-gallery a:hover img {
+  opacity: 0.88;
+}
+
+.gallery-note {
+  margin: 8px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   PERSONAL — TV, BOOKS & MOVIES
+   ========================================================= */
+
+.media-grid {
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 16px;
+  gap: 18px;
 
-  margin-top: 28px;
+  margin-top: 35px;
 }
 
-.art-gallery a {
-  display: block;
+.media-card {
+  background: var(--cream);
 
-  background: var(--paper);
+  padding: 32px;
 
-  overflow: hidden;
+  min-height: 220px;
 
-  border: 1px solid var(--line);
+  border: 1px solid transparent;
 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease,
+              border-color 0.25s ease;
 }
 
-.art-gallery a:hover {
+.media-card:hover {
   transform: translateY(-4px);
 
-  box-shadow: 0 8px 20px rgba(34, 37, 31, 0.08);
+  border-color: var(--line);
 }
 
-.art-gallery img {
-  width: 100%;
-
-  height: 300px;
-
-  object-fit: contain;
-
+.media-card > span {
   display: block;
 
-  transition: transform 0.3s ease, opacity 0.25s ease;
+  color: var(--sage);
+
+  font-size: 0.73rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+
+  font-weight: 700;
 }
 
-.art-gallery a:hover img {
-  opacity: 0.88;
+.media-card h3 {
+  margin-top: 18px;
 
-  transform: scale(1.02);
+  margin-bottom: 8px;
 }
 
-.scroll-gallery {
-    display: flex;
-    gap: 18px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 10px 0 18px;
-    scroll-behavior: smooth;
-}
-
-.scroll-gallery a {
-    flex: 0 0 auto;
-}
-
-.scroll-gallery img {
-    display: block;
-    height: 360px;
-    width: auto;
-    max-width: 480px;
-    object-fit: contain;
+.media-card p {
+  color: var(--muted);
 }
 
 
@@ -997,10 +1046,12 @@ code {
 
 
 /* =========================================================
-   TABLET / MOBILE
+   TABLET
    ========================================================= */
 
 @media (max-width: 800px) {
+
+  /* Navigation */
 
   .nav {
     display: none;
@@ -1031,7 +1082,7 @@ code {
   }
 
 
-  /* HERO */
+  /* Hero */
 
   .hero {
     grid-template-columns: 1fr;
@@ -1060,7 +1111,7 @@ code {
   }
 
 
-  /* OTHER SECTIONS */
+  /* Other sections */
 
   .intro,
   .two-col,
@@ -1073,24 +1124,32 @@ code {
   .cards,
   .project-grid,
   .shadow-grid,
-  .personal-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
 
-  /* ART GALLERY */
+  /* Personal media cards */
 
-  .art-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .art-gallery img {
-    height: 280px;
+  .media-grid {
+    grid-template-columns: 1fr;
   }
 
 
-  /* CURRENTLY */
+  /* Personal image galleries */
+
+  .scroll-gallery {
+    gap: 14px;
+  }
+
+  .scroll-gallery img {
+    height: 300px;
+
+    max-width: 400px;
+  }
+
+
+  /* Currently */
 
   .currently-grid {
     grid-template-columns: 1fr 1fr;
@@ -1105,13 +1164,14 @@ code {
   }
 
 
-  /* FOOTER */
+  /* Footer */
 
   footer {
     flex-direction: column;
 
     gap: 5px;
   }
+
 }
 
 
@@ -1121,9 +1181,14 @@ code {
 
 @media (max-width: 500px) {
 
+  /* Navigation */
+
   .nav-wrap {
     padding: 16px 20px;
   }
+
+
+  /* Page spacing */
 
   .hero,
   .section,
@@ -1138,6 +1203,9 @@ code {
     gap: 40px;
   }
 
+
+  /* Typography */
+
   .hero h1 {
     font-size: clamp(3rem, 15vw, 4.5rem);
   }
@@ -1146,6 +1214,13 @@ code {
     font-size: 1rem;
   }
 
+  .lead {
+    font-size: 1rem;
+  }
+
+
+  /* Hero photo */
+
   .hero-photo img {
     max-width: 100%;
 
@@ -1153,22 +1228,20 @@ code {
   }
 
 
-  /* ART GALLERY */
+  /* Personal galleries */
 
-  .art-gallery {
-    grid-template-columns: 1fr;
-
-    gap: 14px;
+  .scroll-gallery {
+    gap: 12px;
   }
 
-  .art-gallery img {
-    height: auto;
+  .scroll-gallery img {
+    height: 260px;
 
-    max-height: 500px;
+    max-width: 85vw;
   }
 
 
-  /* CURRENTLY */
+  /* Currently */
 
   .currently-grid {
     grid-template-columns: 1fr;
@@ -1179,7 +1252,7 @@ code {
   }
 
 
-  /* EXPERIENCE */
+  /* Experience */
 
   .experience-item,
   .timeline-list > div {
@@ -1189,7 +1262,7 @@ code {
   }
 
 
-  /* FOOTER */
+  /* Footer */
 
   footer {
     padding-left: 20px;
@@ -1197,7 +1270,7 @@ code {
   }
 
 
-  /* QUOTE */
+  /* Quote */
 
   .quote {
     padding-top: 90px;
@@ -1207,4 +1280,5 @@ code {
   .quote-note {
     font-size: 0.88rem;
   }
+
 }
