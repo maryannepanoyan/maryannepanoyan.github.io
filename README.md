@@ -1,6 +1,10 @@
 # Mary Anne Panoyan — Academic Portfolio
 
-Starter GitHub Pages website for `maryannepanoyan.github.io`.
+GitHub Pages website for `maryannepanoyan.github.io`.
+
+The site should then appear at:
+
+`https://maryannepanoyan.github.io`
 
 ## Files
 
@@ -15,24 +19,12 @@ Starter GitHub Pages website for `maryannepanoyan.github.io`.
 - `style.css` — site design
 - `script.js` — mobile navigation and active-page highlighting
 
-## Add your CV
-
-Place your PDF at:
-
-`documents/Mary_Anne_Panoyan_CV.pdf`
-
-Then the download button on `cv.html` will work.
 
 ## Add images
 
-Place photos/artwork inside `images/` and we can add them to the relevant pages.
+Place photos inside `images/` and add them to the relevant pages.
 
-## GitHub Pages
+## Add document
 
-In your repository, go to:
+Place pdf inside `documents/` and add them to the relevant pages.
 
-**Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save**
-
-Your site should then appear at:
-
-`https://maryannepanoyan.github.io`
