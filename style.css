@@ -873,6 +873,27 @@ footer {
   transform: scale(1.02);
 }
 
+.scroll-gallery {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0 18px;
+    scroll-behavior: smooth;
+}
+
+.scroll-gallery a {
+    flex: 0 0 auto;
+}
+
+.scroll-gallery img {
+    display: block;
+    height: 360px;
+    width: auto;
+    max-width: 480px;
+    object-fit: contain;
+}
+
 
 /* =========================================================
    CURRENTLY
