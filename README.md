@@ -8,8 +8,7 @@ The site should then appear at:
 
 ## Files
 
-- `index.html` — homepage
-- `about.html` — about / academic background
+- `index.html` — homepage/about page
 - `research.html` — research projects and methods
 - `teaching.html` — teaching experience and philosophy
 - `cv.html` — CV page
@@ -24,7 +23,7 @@ The site should then appear at:
 
 Place photos inside `images/` and add them to the relevant pages.
 
-## Add document
+## Add documents
 
 Place pdf inside `documents/` and add them to the relevant pages.
 
